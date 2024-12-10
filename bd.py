@@ -1,6 +1,6 @@
 import sqlite3
 def create_database():
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect('schedule.db')
     cursor = conn.cursor()
 
     # Создание таблицы пользователей
