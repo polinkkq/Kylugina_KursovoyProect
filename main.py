@@ -534,7 +534,7 @@ class AdminWindow(QMainWindow):
                                    (login, password, role, student_id))
                 elif role == "преподаватель":
                     # Создаем запись преподавателя
-                    cursor.execute("INSERT INTO teachers (name, position) VALUES (?, ?)", (name, extra_info))
+                    cursor.execute("INSERT INTO teachers (name, post) VALUES (?, ?)", (name, extra_info))
                     teacher_id = cursor.lastrowid
                     cursor.execute("INSERT INTO users (login, password, role, teacher_id) VALUES (?, ?, ?, ?)",
                                    (login, password, role, teacher_id))
